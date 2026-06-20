@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Рэй — личный AI-помощник</title>
+  <meta name="description" content="Рэй помогает держать фокус, учиться, помнить цели и общаться с AI как с личным помощником.">
+  <meta property="og:title" content="Рэй — личный AI-помощник">
+  <meta property="og:description" content="AI-компаньон с памятью, голосом и web-чатом.">
+  <meta property="og:image" content="assets/ray-avatar.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/ray-avatar.png" type="image/png">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#app" aria-label="Рэй">
+      <img class="brand-avatar" src="assets/ray-avatar.png" alt="">
+      <span>Рэй</span>
+    </a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#app">Чат</a>
+      <a href="#stack">Подключение</a>
+      <a href="#next">План</a>
+    </nav>
+    <a class="nav-action" href="#app">Открыть</a>
+  </header>
+
+  <main>
+    <section id="app" class="app-screen">
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="assets/ray-avatar.png" alt="">
+          <div>
+            <strong>Рэй</strong>
+            <span>личный помощник</span>
+          </div>
+        </div>
+
+        <div class="mode-list" aria-label="Режимы">
+          <button class="mode is-active" type="button">💬 Общение</button>
+          <button class="mode" type="button">📚 Учитель</button>
+          <button class="mode" type="button">🎯 Цели</button>
+          <button class="mode" type="button">📝 Дневник</button>
+        </div>
+
+        <div class="mini-panel">
+          <span>Сегодня</span>
+          <strong>1 маленький шаг</strong>
+          <p>Рэй помогает выбрать главное, а не тащить всё сразу.</p>
+        </div>
+      </aside>
+
+      <section class="chat-workspace" aria-label="Web-чат Рея">
+        <div class="workspace-top">
+          <div>
+            <p class="eyebrow">Web-chat</p>
+            <h1>Привет, я Рэй. А ты?</h1>
+          </div>
+          <span class="connection" id="chatStatus">demo mode</span>
+        </div>
+
+        <div class="chat-shell">
+          <div class="chat-log" id="chatLog">
+            <div class="message ray">Расскажи, что сейчас важно: учеба, цель, идея или просто мысли в голове.</div>
+            <div class="message user">Хочу не терять фокус и начать учить английский.</div>
+            <div class="message ray">Ок. Сегодня без перегруза: 15 минут английского и один вечерний итог. Начни со слов, аудирования или короткого разговора.</div>
+          </div>
+          <form class="chat-form" id="chatForm">
+            <input id="chatInput" type="text" autocomplete="off" placeholder="Напиши Рэю..." aria-label="Сообщение Рэю">
+            <button type="submit" aria-label="Отправить">→</button>
+          </form>
+        </div>
+      </section>
+
+      <aside class="context-panel">
+        <div class="context-card">
+          <span>Память</span>
+          <p>Контекст, цели и стиль общения сохраняются в общей базе.</p>
+        </div>
+        <div class="context-card">
+          <span>Голос</span>
+          <p>Telegram уже принимает голосовые и отвечает по смыслу.</p>
+        </div>
+        <div class="context-card">
+          <span>Картинки</span>
+          <p>Рэй умеет искать изображения и готов к vision-анализу после ключа.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="stack" class="stack-section">
+      <div>
+        <p class="eyebrow">Как это будет работать</p>
+        <h2>Telegram и сайт подключаются к одному Рэю.</h2>
+      </div>
+      <div class="stack-grid">
+        <article>
+          <span>01</span>
+          <strong>Telegram</strong>
+          <p>Основной канал: голос, стикеры, цели, память.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>Ray API</strong>
+          <p>Общая логика и память для всех интерфейсов.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>Web</strong>
+          <p>Этот сайт станет настоящим чатом после VM.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="next" class="next-section">
+      <div>
+        <p class="eyebrow">Следующий шаг</p>
+        <h2>Поднять backend, вставить URL в config.js — и сайт оживёт.</h2>
+        <p>Пока VM готовит друг, сайт работает как демо-интерфейс. После запуска API мы подключим `window.RAY_API_URL`, и web-чат будет использовать ту же память, что Telegram.</p>
+      </div>
+      <a class="button primary" href="#app">Вернуться к чату</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Рэй</span>
+    <span>Telegram + Web + общая память</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
