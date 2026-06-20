@@ -1,0 +1,21 @@
+{
+  "name": "ray_site",
+  "version": "1.0.0",
+  "description": "Ray website",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dilphi/ray-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dilphi/ray-web/issues"
+  },
+  "homepage": "https://github.com/Dilphi/ray-web#readme"
+}
